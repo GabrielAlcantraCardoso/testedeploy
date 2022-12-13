@@ -38,7 +38,7 @@ export class Call {
     @Column({nullable: true})
     userSolvedName: string
 
-    @ManyToOne(() => Equipment)
+    @ManyToOne(() => Equipment, {onDelete: "CASCADE"})
     equipment: Equipment
 
     @Column()

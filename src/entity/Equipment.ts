@@ -16,7 +16,7 @@ export class Equipment {
     @Column()
     place: string 
     
-    @ManyToOne(() => EquipmentModel)
+    @ManyToOne(() => EquipmentModel, {onDelete: "CASCADE"})
     equipmentModel: EquipmentModel
 }
 
